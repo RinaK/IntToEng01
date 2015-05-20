@@ -98,4 +98,18 @@ public class PairProEnTest {
 		String actual = en.translateEng(10000);
 		assertThat(actual,is(expected));
 	}
+	@Test
+	public void 二十万() {
+		IntoToEng en = new IntoToEng();
+		String expected = "two hundred thousand";
+		String actual = en.translateEng(200000);
+		assertThat(actual,is(expected));
+	}
+	@Test
+	public void 二百万() {
+		IntoToEng en = new IntoToEng();
+		String expected = "twenty hundred thousand";
+		String actual = en.translateEng(2000000);
+		assertThat(actual,is(expected));
+	}
 }
